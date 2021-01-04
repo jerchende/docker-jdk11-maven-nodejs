@@ -14,4 +14,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag jdk11-maven-nodejs:$(date +%s)
+      run: docker build . --file Dockerfile --tag ghcr.io/jerchende/docker-jdk11-maven-nodejs/jdk11-maven-nodejs:latest && docker push ghcr.io/jerchende/docker-jdk11-maven-nodejs/jdk11-maven-nodejs:latest
+
